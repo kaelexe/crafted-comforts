@@ -1,0 +1,9 @@
+services:
+  website:
+    build:
+      context: .
+      args:
+        VITE_CONTACT_EMAIL: ${VITE_CONTACT_EMAIL:-}
+    ports:
+      - "8080:80"
+    restart: unless-stopped
